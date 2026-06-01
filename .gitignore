@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+htmlcov/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data & Models (ignore raw CSVs, keep structure)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+
+# Documents / Outputs (keep structure, ignore generated assets/reports if desired, or allow keeping gitkeep)
+documents/eda/*
+!documents/eda/.gitkeep
+notebooks/*
+!notebooks/.gitkeep
