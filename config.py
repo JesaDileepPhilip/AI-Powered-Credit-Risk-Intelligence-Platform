@@ -40,6 +40,12 @@ class Settings(BaseSettings):
     models_dir: Path = Field(default=BASE_DIR / "models")
     notebooks_dir: Path = Field(default=BASE_DIR / "notebooks")
     documents_dir: Path = Field(default=BASE_DIR / "documents")
+    explainability_dir: Path = Field(
+        default=BASE_DIR / "documents" / "explainability"
+    )
+    explainability_local_dir: Path = Field(
+        default=BASE_DIR / "documents" / "explainability" / "local"
+    )
 
     # ── Dataset Filenames ─────────────────────────────────────────────────────
     app_train_filename: str = Field(default="application_train.csv")
@@ -137,6 +143,8 @@ class Settings(BaseSettings):
             self.models_dir,
             self.notebooks_dir,
             self.documents_dir,
+            self.explainability_dir,
+            self.explainability_local_dir,
             self.db_path.parent,
         ]
         for d in dirs:
